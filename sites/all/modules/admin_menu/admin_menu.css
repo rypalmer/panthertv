@@ -1,4 +1,4 @@
-/* $Id: admin_menu.css,v 1.15.2.12 2008/07/05 00:57:17 sun Exp $ */
+/* $Id: admin_menu.css,v 1.25.2.4 2008/11/02 21:36:22 sun Exp $ */
 /**
  * Administration Menu.
  *
@@ -18,11 +18,13 @@ body.admin-menu { margin-top: 20px !important; }
 #admin-menu, #admin-menu ul { padding: 0; margin: 0; list-style: none; line-height: 1.4em; z-index: 999; }
 #admin-menu ul { position: static; }
 #admin-menu ul a { display: block; border-right: 1px solid #323232; border-bottom: none; padding: 4px 8px; font-weight: normal; color: #eee; text-decoration: none; text-align: left; }
+#admin-menu ul li.admin-menu-tab a { border-right: 1px solid #52565e; }
 #admin-menu li li a { border-right: none; border-top: 1px solid #323232; }
 
 /* all list items */
 /* width needed or else Opera goes nuts */
 #admin-menu li { float: left; height: 100%; margin: 0 !important; padding: 0; list-style-image: none; list-style-type: none; background-image: none; }
+#admin-menu li.admin-menu-tab { padding-bottom: 1px; background: url(images/bkg_tab.png) repeat-x left bottom; }
 #admin-menu li li { width: 160px; background: #202020; filter:Alpha(opacity=88); opacity: 0.88; }
 
 /* second-level lists */
@@ -36,10 +38,10 @@ body.admin-menu { margin-top: 20px !important; }
 #admin-menu li:hover ul ul ul,
 #admin-menu li:hover ul ul ul ul,
 #admin-menu li:hover ul ul ul ul ul,
-#admin-menu li.sfhover ul ul,
-#admin-menu li.sfhover ul ul ul,
-#admin-menu li.sfhover ul ul ul ul,
-#admin-menu li.sfhover ul ul ul ul ul {
+#admin-menu li.iehover ul ul,
+#admin-menu li.iehover ul ul ul,
+#admin-menu li.iehover ul ul ul ul,
+#admin-menu li.iehover ul ul ul ul ul {
   left: -999em;
   display: none;
 }
@@ -50,11 +52,11 @@ body.admin-menu { margin-top: 20px !important; }
 #admin-menu li li li:hover ul,
 #admin-menu li li li li:hover ul,
 #admin-menu li li li li li:hover ul,
-#admin-menu li.sfhover ul,
-#admin-menu li li.sfhover ul,
-#admin-menu li li li.sfhover ul,
-#admin-menu li li li li.sfhover ul,
-#admin-menu li li li li li.sfhover ul {
+#admin-menu li.iehover ul,
+#admin-menu li li.iehover ul,
+#admin-menu li li li.iehover ul,
+#admin-menu li li li li.iehover ul,
+#admin-menu li li li li li.iehover ul {
   left: auto;
   display: block;
 }

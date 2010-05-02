@@ -1,43 +1,43 @@
 <?php
 
+/**
+ * @file
+ * Game control module
+ */
 
-function ptv_menu($may_cache) {
+/**
+ * Implements hook_menu().
+ */
+function ptv_menu() {
   $items = array();
-
-  if (!$may_cache) {
-    if (arg(2) == 'control') {
-      $items[] = array('path' => 'node/'. arg(1) .'/control',
-                       'title' => 'Game control',
-                       'type' => MENU_CALLBACK,
-                       'access' => user_access('edit game content'),
-                       'callback' => 'ptv_game_control');
-    }
-  }
+  $items['node/%node/control'] = array(
+    'title' => 'Game control',
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('edit game content'),
+    'page callback' => 'ptv_game_control',
+    'page arguments' => array(1),
+  );
   return $items;
 }
 
-
+/**
+ * Block callback for Game Control block
+ */
 function panthertv_game_control_block() {
-  if (arg(0) == 'node' && is_numeric(arg(1)) && $game = node_load(arg(1))) {
-    if ($game->type == 'game') {
-//print_r($game);
-      // good to go.
-      // Show time and plus/minus
-      $rows[] = array('Mins', l('-', 'node/'. arg(1) .'/control/mins/minus'), $game->field_game_progress_mins[0]['value'], l('+', 'node/'. arg(1) .'/control/mins/plus'));
-      // Show score plus/minus
-      $rows[] = array('Goals Home', l('-', 'node/'. arg(1) .'/control/home/minus'), $game->field_home_score[0]['value'], l('+', 'node/'. arg(1) .'/control/home/plus'));
-      $rows[] = array('Goals Away', l('-', 'node/'. arg(1) .'/control/away/minus'), $game->field_visiting_score[0]['value'], l('+', 'node/'. arg(1) .'/control/away/plus'));
-      $output = theme('table', array(), $rows);
-      $output .= l('edit this game', 'node/'. arg(1) .'/edit') .' to change other stuff';
-      return $output;
-    }
+  if (arg(0) == 'node' && is_numeric(arg(1)) && $game = node_load(array('nid' => arg(1), 'type' => 'game'))) {
+    $rows[] = array('Mins', l('-', 'node/'. arg(1) .'/control/mins/minus'), $game->field_game_progress_mins[0]['value'], l('+', 'node/'. arg(1) .'/control/mins/plus'));
+    $rows[] = array('Goals Home', l('-', 'node/'. arg(1) .'/control/home/minus'), $game->field_home_score[0]['value'], l('+', 'node/'. arg(1) .'/control/home/plus'));
+    $rows[] = array('Goals Away', l('-', 'node/'. arg(1) .'/control/away/minus'), $game->field_visiting_score[0]['value'], l('+', 'node/'. arg(1) .'/control/away/plus'));
+    $output = theme('table', array(), $rows);
+    $output .= l('edit this game', 'node/'. arg(1) .'/edit') .' to change other stuff';
+    return $output;
   }
 }
 
-
-function ptv_game_control() {
-  $game = node_load(arg(1));
-//print_r($game); die();
+/**
+ * Menu callback for node/%node/control
+ */
+function ptv_game_control($game) {
   switch (arg(3)) {
     case 'mins':
       if (arg(4) == 'minus') {

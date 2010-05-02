@@ -1,5 +1,10 @@
 <?php
-// $Id: podomatic.inc,v 1.1 2008/01/08 21:23:17 aaron Exp $
+// $Id: podomatic.inc,v 1.1.4.12 2009/10/29 13:32:55 aaron Exp $
+
+/**
+ * @file
+ * This include processes Podomatic audio files for use by emaudio.module.
+ */
 
 define('EMAUDIO_PODOMATIC_MAIN_URL', 'http://www.podomatic.com/');
 
@@ -15,7 +20,6 @@ define('EMAUDIO_PODOMATIC_MAIN_URL', 'http://www.podomatic.com/');
  *      These will be rendered in a table, with the columns being 'Feature', 'Supported', 'Notes'.
  */
 function emaudio_podomatic_info() {
-  $name = t('podOmatic');
   $features = array(
     array(t('Autoplay'), t('No'), ''),
     array(t('RSS Attachment'), t('No'), ''),
@@ -23,9 +27,9 @@ function emaudio_podomatic_info() {
   );
   return array(
     'provider' => 'podomatic',
-    'name' => $name,
+    'name' => t('podOmatic'),
     'url' => EMAUDIO_PODOMATIC_MAIN_URL,
-    'settings_description' => t('These settings specifically affect audio podcasts displayed from !podomatic.', array('!podomatic' => l($name, EMAUDIO_PODOMATIC_MAIN_URL, array('target' => '_blank')))),
+    'settings_description' => t('These settings specifically affect audio podcasts displayed from <a href="@podomatic" target="_blank">podOmatic</a>.', array('@podomatic' => EMAUDIO_PODOMATIC_MAIN_URL)),
     'supported_features' => $features,
   );
 }
@@ -71,30 +75,27 @@ function emaudio_podomatic_extract($embed = '') {
  *    a string containing the URL to view the audio at the original provider's site
  */
 function emaudio_podomatic_embedded_link($audio_code) {
-  return 'http://www.podomatic.com/podcast/embed/' . $audio_code;
+  return 'http://www.podomatic.com/podcast/embed/'. $audio_code;
 }
 
 /**
+ * hook theme_emaudio_PROVIDER_flash
  * the embedded flash displaying the podomatic audio
  */
+
 function theme_emaudio_podomatic_flash($embed, $width, $height, $autoplay) {
   // <object width="320" height="315"><param name="movie" value="http://www.podOmatic.com/flash/flashcatcher.swf"></param><embed type="application/x-shockwave-flash" src="http://www.podOmatic.com/flash/flashcatcher.swf" width="320" height="315" flashvars="playlist_url=http://funkylondon.podOmatic.com/xspf.xspf" ></embed></object><br /><a href="http://www.podOmatic.com/podcast/embed/funkylondon" style="text-decoration: none"><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#0033ff"><strong>Click here to get your own player.</strong></font></a><br><br>
 
-  if ($embed) {
-/*    if ($autoplay) {
+   if ($embed) {
+   /*
+    if ($autoplay) {
       $autoplay_value = '&autostart=1';
-    }*/
-    $output .= "
-    <object type=\"application/x-shockwave-flash\" height=\"$height\" width=\"$width\" data=\"http://www.podOmatic.com/flash/flashcatcher.swf\" id=\"audioPlayback\">
-      <param name=\"movie\" value=\"http://www.podOmatic.com/flash/flashcatcher.swf\">
-      <param name=\"allowScriptAcess\" value=\"sameDomain\">
-      <param name=\"quality\" value=\"best\">
-      <param name=\"bgcolor\" value=\"#FFFFFF\">
-      <param name=\"scale\" value=\"noScale\">
-      <param name=\"salign\" value=\"TL\">
-      <param name=\"FlashVars\" value=\"playlist_url=http://" . $embed . ".podOmatic.com/xspf.xspf\" />
-      <param name=\"wmode\" value=\"transparent\" />
-    </object>\n";
+    }
+	*/
+    $output = '<embed type="application/x-shockwave-flash"
+	src="http://www.podomatic.com/swf/mediaplayer.swf" width="320" height="340"
+	allowscriptaccess="always" allowfullscreen="true"
+	flashvars="thumbsinplaylist=true&width=320&height=340&file=http://'.$embed.'.podOmatic.com/xspf_stream.xml&autoscroll=false&displayheight=240&searchbar=false" />';
   }
   return $output;
 }
@@ -130,7 +131,7 @@ function emaudio_podomatic_thumbnail($field, $item, $formatter, $node, $width, $
  *  @return
  *    the html of the embedded audio
  */
-function emaudio_podomatic_audio($embed, $width, $height, $field, $item, $autoplay) {
+function emaudio_podomatic_audio($embed, $width, $height, $field, $item, $node, $autoplay) {
   $output = theme('emaudio_podomatic_flash', $embed, $width, $height, $autoplay);
   return $output;
 }
@@ -151,7 +152,19 @@ function emaudio_podomatic_audio($embed, $width, $height, $field, $item, $autopl
  *  @return
  *    the html of the embedded audio
  */
-function emaudio_podomatic_preview($embed, $width, $height, $field, $item, $autoplay) {
+function emaudio_podomatic_preview($embed, $width, $height, $field, $item, $node, $autoplay) {
   $output = theme('emaudio_podomatic_flash', $embed, $width, $height, $autoplay);
   return $output;
+}
+
+/**
+ * Implementation of hook_emfield_subtheme.
+ */
+function emaudio_podomatic_emfield_subtheme() {
+  return array (
+    'emaudio_podomatic_flash'  => array(
+            'arguments' => array('embed' => NULL, 'width' => NULL, 'height' => NULL, 'autoplay' => NULL),
+            'file' => 'providers/podomatic.inc'
+        )
+    );
 }

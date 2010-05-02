@@ -1,12 +1,16 @@
-; $Id: calendar.info,v 1.1.2.3 2007/06/18 23:06:32 dww Exp $
+; $Id: calendar.info,v 1.8 2008/04/23 23:42:53 karens Exp $
 name = Calendar
-description = Adds date calendar themes to views that can display any type of date field, and creates default calendar views.
-package = Views
-dependencies = views date_api
+description = Views plugin to display views containing dates as Calendars.
+dependencies[] = views
+dependencies[] = date_api
+dependencies[] = date_timezone
+package = Date/Time
+core = 6.x
 
 
-; Information added by drupal.org packaging script on 2007-10-26
-version = "5.x-1.7"
+; Information added by drupal.org packaging script on 2009-07-29
+version = "6.x-2.2"
+core = "6.x"
 project = "calendar"
-datestamp = "1193367002"
+datestamp = "1248867038"
 

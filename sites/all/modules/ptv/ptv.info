@@ -1,3 +1,4 @@
 ; $Id$
 name = Panther TV
 description = PTV Stuff by Ryan Palmer
+core = 6.x
