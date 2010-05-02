@@ -1,0 +1,11 @@
+; $Id: simplefeed_stats.info,v 1.1.2.1 2008/09/28 02:59:38 m3avrck Exp $
+name = SimpleFeed Statistics
+description = Collects statistics about Simplefeed usage.
+package = SimpleFeed
+dependencies = simplefeed
+
+; Information added by drupal.org packaging script on 2008-10-08
+version = "5.x-3.1"
+project = "simplefeed"
+datestamp = "1223428219"
+

@@ -1,0 +1,83 @@
+<?php
+// $Id: simplefeed.install,v 1.10.2.5 2008/09/26 03:29:59 m3avrck Exp $
+
+/**
+ * Implementation of hook_install().
+ */
+function simplefeed_install() {
+  switch ($GLOBALS['db_type']) {
+    case 'mysql':
+    case 'mysqli':
+      db_query("CREATE TABLE {simplefeed_feed} (
+        vid int unsigned NOT NULL,
+        nid int unsigned NOT NULL,
+        url text,
+        expires int NOT NULL default '0',
+        refresh int NOT NULL default '0',
+        checked int NOT NULL default '0',
+        error int(1) NOT NULL default '0', 
+        hash varchar(32),        
+        PRIMARY KEY (vid),
+        KEY nid (nid),
+        KEY error (error)
+      ) /*!40100 DEFAULT CHARACTER SET UTF8 */ ");
+      break;
+    case 'pgsql':
+      db_query("CREATE TABLE {simplefeed_feed} (
+        vid int_unsigned NOT NULL,
+        nid int_unsigned NOT NULL,
+        url text,
+        expires int NOT NULL default '0',
+        refresh int NOT NULL default '0',
+        checked int NOT NULL default '0',
+        error int(1) NOT NULL default '0',
+        hash varchar(32),        
+        PRIMARY KEY (vid)
+      )");
+      db_query("CREATE INDEX {simplefeed_feed}_nid_idx ON {simplefeed_feed} (nid)");
+      db_query("CREATE INDEX {simplefeed_feed}_error_idx ON {simplefeed_feed} (nid)");      
+      break;
+  }
+
+  drupal_set_message(t('SimpleFeed successfully installed.'));
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function simplefeed_uninstall() {
+  db_query('DROP TABLE {simplefeed_feed}');
+  node_type_delete('feed');
+  variable_del('simplefeed_expires');
+  variable_del('simplefeed_refresh');
+  variable_del('simplefeed_format');
+  variable_del('simplefeed_vocab');
+  variable_del('simplefeed_categories');
+  variable_del('simplefeed_cron_throttle');
+  variable_get('simplefeed_check_url');
+}
+
+function simplefeed_update_1() {
+  $ret = array();
+  $ret[] = update_sql("ALTER TABLE {simplefeed_feed} ADD COLUMN hash varchar(32)");
+  return $ret;  
+}
+
+function simplefeed_update_2() {
+  $ret = array();
+  $ret[] = update_sql("ALTER TABLE {simplefeed_feed} DROP INDEX url");
+  $ret[] = update_sql("ALTER TABLE {simplefeed_feed} CHANGE url url text");  
+  return $ret;
+}
+
+function simplefeed_update_3() {
+  $ret = array();
+  $ret[] = update_sql("ALTER TABLE {simplefeed_feed} ADD COLUMN error int(1) NOT NULL DEFAULT 0");
+  if ($GLOBALS['db_type'] == 'pgsql') {
+    db_query("CREATE INDEX {simplefeed_feed}_error_idx ON {simplefeed_feed} (error)");
+  }
+  else {
+    db_query("CREATE INDEX error ON {simplefeed_feed} (error)");
+  }
+  return $ret;
+}
