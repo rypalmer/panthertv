@@ -35,7 +35,7 @@ $field_date_value = date('l, M dS, Y - h:i A', (int) $field_date_value);
   drupal_add_css(path_to_theme() .'/views-list-schedule.css');
   
   ?>
-<!--<table><tbody>--><tr class="view-schedule-tr"><td 
+<tr class="view-schedule-tr"><td 
 class="view-data-field-home-team-nid"><div class="view-field view-data-field-home-team-nid">
   <?php print $field_home_team_nid?>
 </div></td>
@@ -46,6 +46,4 @@ class="view-data-field-home-team-nid"><div class="view-field view-data-field-hom
 
 <td class="view-data-field-date-value"><div class="view-field view-data-field-date-value">
   <?php print $field_date_value?>
-</div></td></tr><!--</tbody></table>-->
-
-
+</div></td></tr>

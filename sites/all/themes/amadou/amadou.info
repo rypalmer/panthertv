@@ -1,0 +1,19 @@
+name = PantherTV Drupal theme
+core = 6.x
+engine = phptemplate
+
+regions[header] = header
+regions[content_top] = content top
+regions[sidebar_left] = sidebar left
+regions[content_bottom] = content bottom
+regions[footer] = footer
+
+features[] = logo
+features[] = favicon
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = primary_links
+stylesheets[all][] = style.css
