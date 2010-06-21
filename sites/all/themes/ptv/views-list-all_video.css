@@ -1,0 +1,49 @@
+table.view-all-video-table {
+background-color: #DAE1DC;
+}
+
+/*td.view-data-title-td {
+width: 305px;
+}*/
+
+.view-all-video {
+padding-left: 15px;
+padding-right: 15px;
+}
+
+.view-label {
+display: inline;
+}
+
+.view-field {
+display: inline;
+}
+
+.view-data-title {
+padding-left: 4px;
+font-size: 1.3em;
+font-weight: 600;
+}
+
+td.view-data-field-video-embed-td {
+width: 305px;
+}
+.view-data-field-video-embed {
+padding-left:4px;
+}
+
+.view-field-name { }
+
+.view-data-name {
+font-weight: 600;
+}
+
+.view-data-created {
+font-size: 9px;
+color: #8c8c8c; }
+
+.view-data-body {
+margin-top:15px;
+}
+
+
