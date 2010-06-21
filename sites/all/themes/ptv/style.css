@@ -1,331 +1,231 @@
-/***** Amadou - $Id: style.css,v 1.8.2.2.4.2 2007/04/10 01:07:04 jwolf 
-Exp $ *****/
+/* $ID$ **/
 
 .commentPicture {
-float:right;
+  float:right;
 }
 
-.view-data-field-video-embed {
-margin-top: -32px;
-margin-left: 1px;}
-
 #top-schedule {
-width: 237px;
-height: 118px;
-background-image: url(/sites/all/themes/pantherradio/img/images/body_02.gif);
-background-repeat: no-repeat;
-display:block;
-position:absolute;
-left: -430px;
+  width: 237px;
+  height: 118px;
+  background-image: url(/sites/all/themes/pantherradio/img/images/body_02.gif);
+  background-repeat: no-repeat;
+  display:block;
+  position:absolute;
+  left: -430px;
 }
 
 .top-schedule-date {
-display:inline;
-font-size: 0.8em;
+  display:inline;
+  font-size: 0.8em;
 }
 .top-schedule-items {
-padding-top: 26px;
-padding-left: 14px;
+  padding-top: 26px;
+  padding-left: 14px;
 }
 .team-vs-team {
-font-size: 0.8em;
-display:inline;
-padding-left: 5px;
+  font-size: 0.8em;
+  display:inline;
+  padding-left: 5px;
 }
 
 #on-air-box {
-display:block;
-position:absolute;
-left: -190px;
-}
-*
-{
-	margin:0;
-	padding:0;
+  display:block;
+  position:absolute;
+  left: -190px;
 }
 
-body
-{
-	background: #216923;
-	font-family:Verdana, Arial, sans;
-	font-size:12px;
+* {
+  margin:0;
+  padding:0;
 }
 
-h1,h2,h3,h4,h5,h6
-{
-	font-weight:normal;
-	/*text-transform:lowercase;*/
+body {
+  background: #216923;
+  font-family:Verdana, Arial, sans;
+  font-size:12px;
 }
 
-#comments h2{
-padding-left: 7px;
+h1,h2,h3,h4,h5,h6 {
+  font-weight:normal;
 }
 
-h3,h4,h5,h6
-{
-	color:#013466;
+#comments h2 {
+  padding-left: 7px;
 }
 
-a
-{
-	color:#5E7EAE;
-	text-decoration:none;
+h3,h4,h5,h6 {
+  color:#013466;
 }
 
-a:hover
-{
-	color:#4FA3F9;
-	text-decoration:underline;
+a {
+  color:#5E7EAE;
+  text-decoration:none;
 }
 
-p
-{
-	line-height:1.8em;
+a:hover {
+ color:#4FA3F9;
+  text-decoration:underline;
 }
 
-#header
-{
-	height:123px;
-	margin:0 auto;
-	position:relative;
-	width:880px;
+p {
+  line-height:1.8em;
 }
 
-#header h1
-{
-	color:#fff;
-	font-size:330%;
-	margin:22px 0 0;
-	padding:0;
-	text-transform:lowercase;
-	white-space:nowrap;
+#header {
+  height:123px;
+  margin:0 auto;
+  position:relative;
+  width:880px;
 }
 
-#header h1 a
-{
-	color:#fff;
-	text-decoration:none;
+#header h1 {
+  color:#fff;
+  font-size:330%;
+  margin:22px 0 0;
+  padding:0;
+  text-transform:lowercase;
+  white-space:nowrap;
 }
 
-#header h2
-{
-	color:#b8b8b8;
-	font-size:112%;
-	margin:0;
-	padding:0;
-	text-transform:uppercase;
+#header h1 a {
+  color:#fff;
+  text-decoration:none;
 }
 
-#headerBlockRegion
-{
-	position:absolute;
-	right:0px;
-	top:12px;
-	display:inline;
+#header h2 {
+  color:#b8b8b8;
+  font-size:112%;
+  margin:0;
+  padding:0;
+  text-transform:uppercase;
+}
+
+#headerBlockRegion {
+  position:absolute;
+  right:0px;
+  top:12px;
+  display:inline;
 }
 
 /*-----site name, slogan and logo-----*/
-#siteNameSlogan
-{
-	float:left;
-	margin:137px -403px 0;
-	padding:0;
+#siteNameSlogan {
+  float:left;
+  margin:137px -403px 0;
+  padding:0;
 }
 
-#siteName
-{
-	color:#fff;
-	float:left;
-	font-family:"trebuchet ms", helvetica, sans-serif;
-	font-size:330%;
-	margin:20px 0 0;
-	text-transform:lowercase;
+#siteName {
+  color:#fff;
+  float:left;
+  font-family:"trebuchet ms", helvetica, sans-serif;
+  font-size:330%;
+  margin:20px 0 0;
+  text-transform:lowercase;
 }
 
-#siteName a
-{
-	color:#fff;
-	text-decoration:none;
+#siteName a {
+  color:#fff;
+  text-decoration:none;
 }
 
-#siteName a:hover
-{
-	color:#ddd;
-	text-decoration:none;
+#siteName a:hover {
+  color:#ddd;
+  text-decoration:none;
 }
 
-#siteSlogan
-{
-	/*clear:both;*/
-	color:#eee;
-	font-size:120%;
-	margin:0;
-	text-transform:uppercase;
-	white-space:nowrap;
+#siteSlogan {
+  /*clear:both;*/
+  color:#eee;
+  font-size:120%;
+  margin:0;
+  text-transform:uppercase;
+  white-space:nowrap;
 }
 
-#logo
-{
-	float:left;
-	margin:20px 0 0;
+#logo {
+  float:left;
+  margin:20px 0 0;
 }
 
-#logo img
-{
-	border:0;
-	float:left;
+#logo img {
+  border:0;
+  float:left;
 }
 
 /*-----primary links in header-----*/
-#menu
-{
-	font-size:12px;
-	position:absolute;
-	right:0;
-	top:1px;
+#menu {
+  font-size:12px;
+  position:absolute;
+  right:0;
+  top:1px;
 }
 
-#menu li
-{
-	display:block;
-	float:left;
-	margin:0;
-	white-space:nowrap;
+#menu li {
+  display:block;
+  float:left;
+  margin:0;
+  white-space:nowrap;
 }
 
-#menu li a
-{
-	color:#fff;
-	display:block;
-	padding:2.5px 10px;
-	text-decoration:none;
+#menu li a {
+  color:#fff;
+  display:block;
+  padding:2.5px 10px;
+  text-decoration:none;
 }
 
-#menu li a:hover
-{
-	background:#30487F;
+#menu li a:hover {
+  background:#30487F;
 }
 
 /*----- main content wrapper-----*/
-#contentWrapper
-{
-	margin:10px auto;
-	position:relative;
-	width:880px;
+#contentWrapper {
+  margin:10px auto;
+  position:relative;
+  width:880px;
 }
 
 /*----------primary content-----*/
-#primaryContent
-{
-	margin-right:34em;
-	position:relative;
-        margin: 40px 0px 0px 0px;
-
+#primaryContent {
+  margin-right:34em;
+  position:relative;
+  margin: 40px 0px 0px 0px;
 }
 
-#primaryContent h3
-{
-	font-size:16px;
-	margin:5px 0;
+#primaryContent h3 {
+  font-size:16px;
+  margin:5px 0;
 }
 
-#mainColumn
-{
-	background: #FFFFFF;
-	float:left;
-	padding: 0px;
-	position:relative;
-	width: 650px;
-	margin-left: 8px;
+#mainColumn {
+  background: #FFFFFF;
 }
 
-/*-----side bars-----*/
-#sidebarsContentL
-{
-	float:left;
-	margin:0;
-	padding:0px 0px 0px 0px;
-	width: 220px;
-}
-#sidebarsContentR
-{
-	float:right;
-	margin:0;
-	padding:5px 0px 0px 0px;
-        /*width:290px;*/
-
+#sidebarLeft h3 {
+  border:none;
+  font-size:14px;
+  font-weight:bold;
 }
 
-#sidebarLeft
-{
-	float:left;
-	margin:0 10px 0em 0em;
-/*	width:13em;*/
-	width:220px;
-	/*background: url('/sites/all/themes/pantherradio/img/images/body2_07.png') 
-repeat-x;*/
-
+#sidebarLeft .title,#sidebarRight .title {
+  font-size:16px;
+  font-weight:bold;
+  margin:0px 0px 3px 0px;
+  padding:10px 0px 3px 8px;
 }
 
-#sidebarLeft h3
-{
-	border:none;
-	font-size:14px;
-	font-weight:bold;
-}
-
-#sidebarLeft .title,#sidebarRight .title
-{
-/*	border-bottom:1px solid #E1E1E1;*/
-	font-size:16px;
-	font-weight:bold;
-	margin:0px 0px 3px 0px;
-	padding:10px 0px 3px 8px;
-}
-
-#block-block-3 .title
-{
-display:none;
-}
-
-#sidebarRight
-{
-	/*float:right;*/
-	margin: -4px 0px 0px 0px;
-/*	width:13em;*/
-	width:312px;
-	/*background: url('/sites/all/themes/pantherradio/img/images/body2_07.png') 
-repeat-x;*/
-}
-
-#sidebarRight h3
-{
-	margin:5px 0;
-}
+#block-block-3 .title { display:none; }
 
 /*-----footer-----*/
-#footer
-{
-	clear:both;
-	margin:1em auto;
-	padding-top:1em;
+#footer {
 	text-align:center;
 	text-transform:lowercase;
-	width:880px;
-}
-
-/*-----node styles-----*/
-.node
-{
-	margin:0px 7px 20px 0px;
-        padding: 10px 0px 10px 11px;
 }
 
 .nodeTitle
 {
 	border-bottom:1px solid #E1E1E1;
 	font-size:17px;
-/*	text-transform:lowercase;*/
 }
 
 h3,h4,h5,h6,.nodeTitle a
@@ -354,24 +254,11 @@ h3,h4,h5,h6,.nodeTitle a
         color:#8c8c8c;
 }
 
-.content
-{
-/*top, right, bottom, lefr*/
-	margin:5px 8px 8px 7px;
-}
-
-.content p
-{
-	margin:0 0 1em 0;
-	text-align:left;
-}
 
 /*----- page styles-----*/
 .pageTitle
 {
 	font-size:21px;
-	margin-bottom:10px;
-        margin-left: 10px;
 }
 
 .messages
@@ -389,8 +276,6 @@ h3,h4,h5,h6,.nodeTitle a
 {
 	background-color:#FAFAFA;
 	border:1px solid #ccc;
-	margin:0 15px 25px 15px;
-	padding:10px;
 }
 
 /*-----misc. & other styles-----*/
@@ -401,14 +286,9 @@ h3,h4,h5,h6,.nodeTitle a
 	line-height:1.5em;
 	margin:0 0 20px/* 20px*/;
 	padding:10px;
-/*	width:90%;*/
 }
 
 /* margin top, right, below (between blocks), left of blocks*/
-.block
-{
-	margin:0px 0px 10px 0px;
-}
 
 li
 {
@@ -472,10 +352,6 @@ dt
 }
 
 /*-----img styles-----*/
-img
-{
-
-}
 
 .thumbnail,.preview
 {
@@ -584,116 +460,14 @@ td.menu-disabled,td.menu-disabled a {
   margin-bottom: -2px;
 }
 
-#videotab-bg {
-  /*background:url('/sites/all/themes/pantherradio/img/images/body_07.png') 
-no-repeat -8px -5px;*/
-}
-
-#videotab-OnDemand a {
-  position:relative;
-  left: 144px;
-  top: -11px;
-  /*position:absolute;
-  left:722px;
-  top:14px;*/
-  color: #216923;
-  font-weight:bold;
-}
-
-#videotab-Live a {
-  position:relative;
-  left: 257px;
-  top: -25px;
-  /*position:absolute;
-  left:835px;
-  top:14px;*/
-  color: #216923;
-  font-weight:bold;
-}
-
-
-/* Changed all following pngs to gifs */
-
-.block-t {
-  background-color: #ECEFED;
-  background-image: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_03.gif);
-  background-position: 0% 0%;
-  background-repeat: repeat-x;
-}
-
-.block-b {
-  background-image: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_13.gif);
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  margin-bottom: -11px;
-  /*padding: -2px 0px 2px 0px;*/
-}
-
-.block-l {
-  background-image: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_07.gif);
-  background-position: 0 0;
-  background-repeat: repeat-y;
-}
-.block-r {
-  background-image: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_09.gif);
-  background-position: 100% 0;
-  background-repeat: repeat-y;
-}
-.block-bl {
-  background-image: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_12.gif);
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-}
-.block-br {
-  background-image: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_14.gif);
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  padding:0px 0px 2px 0px;
-}
-.block-tl {
-  background-image: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_02.gif);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-.block-tr {
-  background-image: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_05.gif);
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-}
-
-/* the complete top of the video box - got it */
-#block-views-most_recent_video .block-bl, #block-block-3 .block-bl {
-  background: url(/sites/all/themes/pantherradio/img/images/rounded-corners-video_07.gif) 0px -3px 
-no-repeat; 
-  margin: -2px 0px 0px 0px;
-}
-
-/* the complete bottom of the video box - got it */
-#block-views-most_recent_video .block-br, #block-block-3 .block-br {
-  background: url(/sites/all/themes/pantherradio/img/images/rounded-corners-video_16.gif) 0 100% no-repeat;
-  margin:-2px 0px 2px 0px;
-}
-
-/* this generates the left and the right borders of the video box */
-#block-views-most_recent_video .block-tr, #block-block-3 .block-tr {
-  background: url(/sites/all/themes/pantherradio/img/images/rounded-corners-video_14.gif) 0 0 repeat-y
-}
-
-.mainColumn-t {background: #ECEFED url(/sites/all/themes/pantherradio/img/images/rounded-corners2_03.png) 0 0 
-repeat-x; }
-.mainColumn-b {background: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_13.png) 0 100% repeat-x;
-padding:0px 0px 0px 0px;}
-.mainColumn-l {background: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_07.png) 0 0 repeat-y}
-.mainColumn-r {background: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_09.png) 100% 0 repeat-y}
-.mainColumn-bl {background: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_12.png) 0 100% no-repeat}
-
-.mainColumn-br {background: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_14.png) 100% 100% no-repeat;
-	padding:0px 0px 2px 0px;}
-.mainColumn-tl {background: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_02.png) 0 0 no-repeat}
-.mainColumn-tr {background: url(/sites/all/themes/pantherradio/img/images/rounded-corners2_05.png) 100% 0 no-repeat;}
-
-.mainColumn-br {
-  padding: 10px;
+.mainColumn, .block {
+  border: 1px #979C99;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -moz-box-shadow:2px 2px 2px #333333
+  -webkit-box-shadow:2px 2px 2px #333333
+  box-shadow:2px 2px 2px #333333
 }
 
 .breadcrumb {

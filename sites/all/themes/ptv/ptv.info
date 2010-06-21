@@ -1,0 +1,5 @@
+name = PantherTV Drupal theme - 960gs
+core = 6.x
+base theme = ninesixty
+
+stylesheets[all][] = style.css

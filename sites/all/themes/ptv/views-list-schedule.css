@@ -8,27 +8,15 @@
  * You should complete each selector according to your liking.
 */
 
-.view-label {
-}
-
-.view-field {
-}
-.view-field-field-home-team-nid {
-}
 td.view-data-field-home-team-nid, td.view-label-field-home-team-nid {
 width: 100px;
-}
-.view-field-field-visiting-team-nid {
 }
 td.view-data-field-visiting-team-nid, td.view-label-field-visiting-team-nid {
 width: 100px;
 }
-.view-field-field-date-value {
-}
 td.view-data-field-date-value, td.view-label-field-date-value {
 width: 200px;
 }
-
 tr.view-schedule-tr{
 height: 20px;
 padding: 0px;
