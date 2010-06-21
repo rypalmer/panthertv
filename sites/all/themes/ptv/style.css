@@ -1,39 +1,5 @@
 /* $ID$ **/
 
-.commentPicture {
-  float:right;
-}
-
-#top-schedule {
-  width: 237px;
-  height: 118px;
-  background-image: url(/sites/all/themes/pantherradio/img/images/body_02.gif);
-  background-repeat: no-repeat;
-  display:block;
-  position:absolute;
-  left: -430px;
-}
-
-.top-schedule-date {
-  display:inline;
-  font-size: 0.8em;
-}
-.top-schedule-items {
-  padding-top: 26px;
-  padding-left: 14px;
-}
-.team-vs-team {
-  font-size: 0.8em;
-  display:inline;
-  padding-left: 5px;
-}
-
-#on-air-box {
-  display:block;
-  position:absolute;
-  left: -190px;
-}
-
 * {
   margin:0;
   padding:0;
@@ -47,15 +13,11 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
   font-weight:normal;
+  margin-bottom: 5px;
 }
 
 h3,h4,h5,h6 {
   color:#013466;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  margin-bottom: 5px;
-
 }
 
 a {
@@ -64,13 +26,11 @@ a {
 }
 
 a:hover {
- color:#4FA3F9;
+  color:#4FA3F9;
   text-decoration:underline;
 }
 
-p {
-  line-height:1.8em;
-}
+p { line-height:1.8em; }
 
 #header {
   height:123px;
@@ -99,13 +59,6 @@ p {
   margin:0;
   padding:0;
   text-transform:uppercase;
-}
-
-#headerBlockRegion {
-  position:absolute;
-  right:0px;
-  top:12px;
-  display:inline;
 }
 
 /*-----site name, slogan and logo-----*/
@@ -213,10 +166,7 @@ p {
 	font-size:17px;
 }
 
-h3,h4,h5,h6,.nodeTitle a
-{
-	color:#013466;
-}
+h3, h4, h5, h6, .nodeTitle a { color:#013466; }
 
 .nodeTitle a:hover {
   color:#3670A8;
@@ -243,6 +193,9 @@ h3,h4,h5,h6,.nodeTitle a
   margin:10px 0;
 }
 
+.commentPicture {
+  float:right;
+}
 .commentTitle { font-size:18px; }
 
 .comment {
@@ -421,7 +374,7 @@ td.menu-disabled,td.menu-disabled a {
 
 /***** Individual blocks *****/
 #block-block-3, #block-views-most_recent_video {	
-  background-image: url('/sites/all/themes/pantherradio/img/images/body_07.gif');
+  background-image: url('images/body_07.gif');
   background-repeat: no-repeat;
   background-position: 0 0;
   padding:4px 0px 0px 0px;
@@ -453,4 +406,34 @@ td.menu-disabled,td.menu-disabled a {
 #block-block-6 table a {
   font-weight: 900;
   font-size: 1.3em;
+}
+
+#top-schedule {
+  width: 237px;
+  height: 118px;
+  background-image: url(images/body_02.gif);
+  background-repeat: no-repeat;
+  display:block;
+  position:absolute;
+  left: -430px;
+}
+
+.top-schedule-date {
+  display:inline;
+  font-size: 0.8em;
+}
+.top-schedule-items {
+  padding-top: 26px;
+  padding-left: 14px;
+}
+.team-vs-team {
+  font-size: 0.8em;
+  display:inline;
+  padding-left: 5px;
+}
+
+#on-air-box {
+  display:block;
+  position:absolute;
+  left: -190px;
 }
