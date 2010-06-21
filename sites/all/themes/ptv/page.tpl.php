@@ -12,19 +12,19 @@
   <?php print $scripts; ?>
 </head>
 
-<body class="<?php print $body_classes; ?> show-grid">
-  <div id="page" class="container-16 clear-block">
+<body class="<?php print $body_classes; ?> REMshow-grid">
+  <div id="page" class="container-12 clear-block">
 
     <div id="site-header" class="clear-block">
       <div id="branding" class="grid-4 clear-block">
       <?php if ($linked_logo_img): ?>
-        <span id="logo" class="grid-1 alpha"><?php print $linked_logo_img; ?></span>
+        <span id="logo" class="grid-6 alpha"><?php print $linked_logo_img; ?></span>
       <?php endif; ?>
       <?php if ($linked_site_name): ?>
-        <h1 id="site-name" class="grid-3 omega"><?php print $linked_site_name; ?></h1>
+        <h1 id="site-name" class="grid-6 omega"><?php print $linked_site_name; ?></h1>
       <?php endif; ?>
       <?php if ($site_slogan): ?>
-        <div id="site-slogan" class="grid-3 omega"><?php print $site_slogan; ?></div>
+        <div id="site-slogan" class="grid-12 alpha omega clear-both"><?php print $site_slogan; ?></div>
       <?php endif; ?>
       </div>
 
@@ -56,7 +56,7 @@
     </div>
 
 
-    <div id="main" class="column <?php print ns('grid-16', $left, 3, $right, 3) . ' ' . ns('push-3', !$left, 3); ?>">
+    <div id="main" class="column <?php print ns('grid-12', $left, 3, $right, 3) . ' ' . ns('push-3', !$left, 3); ?>">
       <?php print $breadcrumb; ?>
       <?php if ($title): ?>
         <h1 class="title" id="page-title"><?php print $title; ?></h1>
@@ -75,7 +75,7 @@
     </div>
 
   <?php if ($left): ?>
-    <div id="sidebar-left" class="column sidebar region grid-3 <?php print ns('pull-12', $right, 3); ?>">
+    <div id="sidebar-left" class="column sidebar region grid-3 <?php print ns('pull-9', $right, 3); ?>">
       <?php print $left; ?>
     </div>
   <?php endif; ?>

@@ -49,12 +49,13 @@ h1,h2,h3,h4,h5,h6 {
   font-weight:normal;
 }
 
-#comments h2 {
-  padding-left: 7px;
-}
-
 h3,h4,h5,h6 {
   color:#013466;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom: 5px;
+
 }
 
 a {
@@ -108,13 +109,8 @@ p {
 }
 
 /*-----site name, slogan and logo-----*/
-#siteNameSlogan {
-  float:left;
-  margin:137px -403px 0;
-  padding:0;
-}
 
-#siteName {
+#site-name {
   color:#fff;
   float:left;
   font-family:"trebuchet ms", helvetica, sans-serif;
@@ -123,18 +119,17 @@ p {
   text-transform:lowercase;
 }
 
-#siteName a {
+#site-name a {
   color:#fff;
   text-decoration:none;
 }
 
-#siteName a:hover {
+#site-name a:hover {
   color:#ddd;
   text-decoration:none;
 }
 
-#siteSlogan {
-  /*clear:both;*/
+#site-slogan {
   color:#eee;
   font-size:120%;
   margin:0;
@@ -178,36 +173,26 @@ p {
   background:#30487F;
 }
 
-/*----- main content wrapper-----*/
-#contentWrapper {
-  margin:10px auto;
-  position:relative;
-  width:880px;
+#main { padding-bottom: 10px; }
+.breadcrumb, h1.title, #main .tabs, #main-content {
+  margin-left: 10px;
+  margin-right: 10px;
 }
-
-/*----------primary content-----*/
-#primaryContent {
-  margin-right:34em;
-  position:relative;
-  margin: 40px 0px 0px 0px;
-}
-
-#primaryContent h3 {
-  font-size:16px;
-  margin:5px 0;
-}
-
-#mainColumn {
+#main, .block {
   background: #FFFFFF;
 }
 
-#sidebarLeft h3 {
+.block {
+  padding: 5px;
+}
+
+#sidebar-left h3 {
   border:none;
   font-size:14px;
   font-weight:bold;
 }
 
-#sidebarLeft .title,#sidebarRight .title {
+#sidebar-left .title,#sidebar-right .title {
   font-size:16px;
   font-weight:bold;
   margin:0px 0px 3px 0px;
@@ -233,49 +218,37 @@ h3,h4,h5,h6,.nodeTitle a
 	color:#013466;
 }
 
-.nodeTitle a:hover
-{
-	color:#3670A8;
-	text-decoration:none;
+.nodeTitle a:hover {
+  color:#3670A8;
+  text-decoration:none;
 }
 
-.taxonomy
-{
-	background:url('icons/tag_red.png') no-repeat 0 4px;
-	clear:both;
-	font-size:10px;
-	padding:0 0 8px 15px;
+.taxonomy {
+  background:url('icons/tag_red.png') no-repeat 0 4px;
+  clear:both;
+  font-size:10px;
+  padding:0 0 8px 15px;
 }
 
-.submitted
-{
-
-	font-size:9px;
-        color:#8c8c8c;
+.submitted {
+  font-size: 9px;
+  color: #8c8c8c;
 }
 
 
 /*----- page styles-----*/
-.pageTitle
-{
-	font-size:21px;
+
+.messages {
+  color:#9F0000;
+  margin:10px 0;
 }
 
-.messages
-{
-	color:#9F0000;
-	margin:10px 0;
-}
+.commentTitle { font-size:18px; }
 
-.commentTitle
-{
-	font-size:18px;
-}
-
-.comment
-{
-	background-color:#FAFAFA;
-	border:1px solid #ccc;
+.comment {
+  background-color:#FAFAFA;
+  border:1px solid #ccc;
+  padding: 5px;
 }
 
 /*-----misc. & other styles-----*/
@@ -289,11 +262,6 @@ h3,h4,h5,h6,.nodeTitle a
 }
 
 /* margin top, right, below (between blocks), left of blocks*/
-
-li
-{
-	margin-left:10px;
-}
 
 dt
 {
@@ -460,8 +428,10 @@ td.menu-disabled,td.menu-disabled a {
   margin-bottom: -2px;
 }
 
-.mainColumn, .block {
-  border: 1px #979C99;
+#main, .block {
+  border: 1px #979C99 solid;
+  margin-left: 9px;
+  margin-right: 9px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -471,8 +441,7 @@ td.menu-disabled,td.menu-disabled a {
 }
 
 .breadcrumb {
-  position: relative;
-  padding:5px 0px 0px 6px;
+  padding-top: 5px;
 }
 
 .feed-icon {
