@@ -72,7 +72,7 @@
       <div id="primaryContent">
 
 <!--Left sidebar-->
-      <div id="sidebarsContentL" style="width: <?php print amadou_get_sideBars_width($sidebar_left, $sidebar_right) ?>px;">
+      <div id="sidebarsContentL">
         <?php if ($sidebar_left) { ?><div id="sidebarLeft"><?php print $sidebar_left ?></div><?php } ?>
       </div>
 

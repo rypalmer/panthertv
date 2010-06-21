@@ -231,13 +231,11 @@ p
 
 #mainColumn
 {
-background: #FFFFFF;
+	background: #FFFFFF;
 	float:left;
-	/*margin-right:-34em;*/
-/*	overflow:hidden;*/
-	padding: 0px 0 0 0px;
+	padding: 0px;
 	position:relative;
-	width: 660px;
+	width: 650px;
 	margin-left: 8px;
 }
 
@@ -247,6 +245,7 @@ background: #FFFFFF;
 	float:left;
 	margin:0;
 	padding:0px 0px 0px 0px;
+	width: 220px;
 }
 #sidebarsContentR
 {
@@ -307,7 +306,6 @@ repeat-x;*/
 /*-----footer-----*/
 #footer
 {
-	border-top:solid 1px #E1E1E1;
 	clear:both;
 	margin:1em auto;
 	padding-top:1em;
